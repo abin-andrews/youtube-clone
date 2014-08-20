@@ -1,0 +1,525 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: block
+	;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix
+{
+	background: white;
+	height: 75px;
+	padding: 15px;
+}
+
+body {
+	/*font-family: 'Lato', Calibri, Arial, sans-serif;	*/	
+	font-family: sans-serif;
+	font-weight: 300; 
+ /* Pattern settings 
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent),
+                      linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%, transparent),
+                      linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%),
+                      linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%);   
+    background-size: 3px 3px;
+*/
+background: #f1f1f1;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+}
+
+div.branding {
+	float: left;
+	display: inline;	
+}
+
+.main,
+.container > header {
+	width: 100%;
+	margin: 0 auto;	
+}
+
+.main {	
+	padding: 2em 0 0 0;
+	margin: 0;	
+}
+
+.side {
+	position: fixed;
+	float: left;
+	min-width: 260px;
+	box-shadow: 1px 0 rgba(0,0,0,0.1);
+	background: #f0f0f0;
+	min-height: 75%;
+	max-width: 260px;
+	/*top: 5%;*/
+	z-index: 1000;
+	margin-top: -5%;
+}
+
+.main p {
+	font-size: 2em;
+	padding: 0 1em;
+	margin: 0;
+	line-height: 1.5;
+	float: right;
+	width: 70%;
+}
+
+.container > header {	
+	text-align: center;	
+}
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.5;
+	margin: 0;
+	color: #fff;
+	font-weight: 300;
+}
+
+.container > header span {
+	display: block;
+	font-size: 60%;
+	color: rgba(255,255,255,0.7);
+	padding: 0 0 0.6em 0.1em;
+}
+
+.sub
+{
+	display: inline-block;
+	width: 175px;
+	margin: 0.2em;
+	position: relative;
+}
+
+/* Header Style */
+.codrops-top {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.85);
+	text-transform: uppercase;
+	position: relative;
+	font-size: 0.68em;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	padding: 0 1em;
+	letter-spacing: 0.1em;
+	color: #333;
+	display: inline-block;
+}
+
+.codrops-top a:hover {
+	background: rgba(255,255,255,0.99);
+	color: #000;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	float: left;
+	display: block;
+}
+
+.videoAssembly
+{
+	/*padding-top: 20px; */	
+	position: relative;
+	max-width: 76.5%;
+	background: white;
+	margin-right: 1%;
+	margin-left: 1%;
+	padding-left: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	z-index: 5;
+
+	/*For Box Shadow Stuff*/
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+#asstitle
+{
+	padding: 5px;
+}
+
+div.description{  
+    position:absolute; /* absolute position (so we can position it where we want)*/      
+    right:0px;  
+    display:none; /* hide it */  
+    /* styling bellow */  
+    background-color:black;  
+    font-family: 'tahoma';  
+    font-size:15px;  
+    color:white;  
+    top: 75px;
+}
+
+div.description_content{
+	width: auto;    
+}
+
+* {
+	margin: 0;
+	}
+	html, body {
+	height: 100%;
+	}
+	
+	.footer, .push {
+	height: 4em;
+	margin-left: 25%;
+	}
+
+@media screen and (max-width: 66.9375em) {
+	.side, .main p {
+		float: none;
+		width: 100%;
+		box-shadow: none;
+		padding: 1em;
+	}
+
+	.main p {
+		font-size: 130%;
+	}
+}
+
+
+/* Custom Selection CSS */
+::selection { background: #e2eae2; }  
+::-moz-selection { background: #e2eae2; }  
+::-webkit-selection { background: #e2eae2; }  
+
+#start
+{
+	display: inline;
+	float: left;
+	position: absolute;
+	font-size: 200%;
+}
+
+.RightPanel
+{
+	float: right;	
+	min-width: 20%;
+	max-width: 20%;
+	margin-right: 1%;	
+	background: white; /* Old browsers */
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+	padding: 1em 0em 1em 0em;	
+}
+
+.rtitle
+{
+	padding-left: 10px;
+	padding-bottom: 1px;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	border-bottom: 5px solid red;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+div.widget
+{
+	margin-bottom: 25px;
+}
+
+ul
+{
+	list-style: none;
+	padding-left: 10px;
+}
+
+ul > li
+{
+	font-family: sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	padding-left: 10px;
+}
+
+
+/* Ok, HTML markup is complete */
+/* submit button will also be the same but with a different color. We'll style the label and the submit input */
+/* a faky 3D look */
+
+
+
+
+/*
+.stitched {   
+   background: #ff0030;
+   color: #fff;
+   font-size: 14px;
+   font-weight: bold;
+   line-height: 1.3em;
+   border: 2px dashed #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   text-shadow: -1px -1px #aa3030;
+   font-weight: normal;
+}
+*/
+
+/*
+img
+{
+Polaroid Effect
+
+background:#000; 
+border:solid #fff;
+border-width:6px 6px 20px 6px;
+box-shadow:1px 1px 5px #333; 
+-webkit-box-shadow:1px 1px 5px #333;
+-moz-box-shadow:1px 1px 5px #333;
+}
+*/
+
+
+/*
+
+img
+{
+Multiple Box Shadows
+
+-webkit-box-shadow: 0 0 10px 5px white, 0px 0px 120px yellow, 0px 20px 420px red; 
+-mox-box-shadow: 0 0 10px 5px white, 0px 0px 120px yellow, 0px 20px 420px red; 
+box-shadow: 0 0 10px 5px white, 0px 0px 120px yellow, 0px 20px 420px red;   
+}
+*/
+
+
+#logo
+{
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+/* Header Form CSS */
+.searchForm
+{
+	float: left;
+	margin-left: 10%;
+	margin-top: 5px;
+}
+
+.searchComponent
+{
+
+}
+
+#searchInput > input[type="text"]
+{
+	font-size: 18px;
+	padding-left: 5px;
+}
+
+#searchInput > input[type="text"]:focus
+{
+	border: 2px solid #00CCFF;
+}
+
+#searchInput > button
+{
+	font-size: 18px;
+	border: 1px solid #BDBDBD;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: -3px;
+	background-color: #ECECEC;
+	width: 75px;
+
+	-webkit-transition: background-color 1500ms linear;
+    -moz-transition: background-color 1500ms  linear;
+    -o-transition: background-color 1500ms linear;
+    transition: background-color 1500ms linear;
+}
+
+#searchInput > button:hover
+{	
+	background-color: #BDBDBD;	
+}
+
+#subhead
+{
+	border-top: 1px solid #ECECEC;
+	height: 20px;
+}
+
+.rightHead
+{
+	float: right;
+	margin-top: 5px;
+}
+
+.rightHead > button
+{
+	font-size: 18px;
+	border: 1px solid #BDBDBD;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: -3px;
+	background-color: #ECECEC;
+	width: 75px;
+}
+
+::-webkit-input-placeholder 
+{
+padding-top: 3px;
+font-size: 14px;
+}
+
+:-moz-placeholder 
+{ /* Firefox 18- */
+padding-top: 3px;
+font-size: 14px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+padding-top: 3px;
+font-size: 14px; 
+}
+
+:-ms-input-placeholder {  
+padding-top: 3px;
+font-size: 14px; 
+}
+
+
+/* Footer CSS */
+.footer
+{
+display: block;
+background-color: #fff;
+margin: 0;
+padding: 10px;
+}
+
+div.footing {
+	float: left;
+	display: inline;	
+}
+
+div.footing > span
+{
+	margin-left: 25px;
+}
+
+div.menu
+{
+	margin-top: 10px;
+}
+
+div.right
+{
+	float: right;
+}
+
+
+
+.social > li
+{
+	font-size: 40px;
+	display: inline;
+}
+
+
+
+/* Responsive Media Queries */
+@media all and (min-width: 1001px) {
+  .side {
+  	background-color: blue;
+
+
+  }
+}
+
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  .side {
+  	background-color: green;
+  	width: 25%;
+  }
+
+  .videoAssembly
+  {
+  	max-width: 77.5%
+  }
+    
+}
+
+@media all and (max-width: 699px) and (min-width: 520px){
+  .side {
+  	background-color: red;
+  	width: 25%;
+  }
+
+  .videoAssembly
+  {
+  	max-width: 70%
+  }
+
+  .RightPanel
+  {
+  	min-width: 27%;
+  	max-width: 27%;
+
+  	padding: 1px;
+  }
+ }
+
+@media all and (max-width: 519px) and (min-width: 100px){
+  .side {
+  	background-color: yellow;
+  	display: none;
+  }
+}

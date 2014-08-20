@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>GVIDOC</title>
+		<meta name="description" content="A tutorial on how to recreate the effect of YouTube's little left side menu. The idea is to slide a little menu icon to the right side while revealing some menu item list beneath. " />
+		<meta name="keywords" content="Add keywords" />
+		<meta name="author" content="_yourName_ for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/nprogress.css" />	
+			
+		<script src="js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/scrollpagination.js"></script>
+		<script type="text/javascript" src='js/nprogress.js'></script>
+		<script type="text/javascript" src="js/gvidoc.js"></script>		
+		<script type="text/javascript">
+
+		var guide = false;		
+		var active = false;
+
+		$(function(){
+
+			$.fn.fadeInWithDelay = function(){
+                    var delay = 0;
+                    return this.each(function(){
+                        $(this).delay(delay).animate({opacity:1}, 2000);
+                        delay += 100;
+                    });
+                };
+
+	$('.main').scrollPagination({
+		'contentPage': 'data.html', // the url you are fetching the results
+		'contentData': 'data=Abin', // these are the variables you can pass to the request, for example: children().size() to know which page you are
+		'scrollTarget': $(window), // who gonna scroll? in this example, the full window
+		'heightOffset': 1, // it gonna request when scroll is 10 pixels before the page ends
+		'beforeLoad': function(){ // before load function, you can display a preloader div
+			//$('#loading').fadeIn();
+			NProgress.start();	
+		},
+		'afterLoad': function(elementsLoaded){ // after loading content, you can use this function to animate your new elements
+			 $('#loading').fadeOut();
+			 var i = 0;
+			 $(elementsLoaded).fadeInWithDelay();
+			 if ($('.main').children().size() > 2){ // if more than 10 results already loaded, then stop pagination (only for testing)
+			 	$('#nomoreresults').fadeIn();
+				$('.main').stopScrollPagination();
+			 }
+			 NProgress.done();
+			 LoadGvidocThumbnails('div.ajaxtitle');
+
+			 if(!guide)
+			 {
+			 	$('div.videoAssembly').css('margin-left', '1%');
+			 }
+			 else
+			 {
+			 	$('div.videoAssembly').css('margin-left', '1%');
+			 }
+			 
+			 //$('div.videoAssembly').css('margin-left', '300px');
+			
+		}
+	});
+});
+
+
+			
+		
+		
+
+		$( document ).ready(function() {
+
+			$('div.side').css('display', 'none');
+			var temp = $('#searchInput > input[type="text"]').css('width');
+			//$('div.videoAssembly').css('margin-left', '30px');
+
+			
+
+		LoadGvidocThumbnails();
+		$('#start').on('click', function(e) {
+			console.log("Guide :"+guide);
+			if(guide)
+			{
+			$('nav.dr-menu').removeClass('dr-menu-open');
+			setTimeout( function() 
+			{
+			//$('div.videoAssembly').css('margin-left', '30px');
+			//$('div.videoAssembly').css('margin-right', '2%');
+			$('#start').css('color', '');
+			$('div.side').css('display', 'none');
+			}, 250);
+						
+			guide = false;
+			console.log("Hide");
+			}
+			else
+			{
+						
+			//$('div.videoAssembly').css('margin-left', '23%');
+			//$('div.videoAssembly').css('margin-right', '1%');
+			$('#start').css('color', 'red');
+			$('div.side').css('display', '');
+			setTimeout( function() {
+				$('nav.dr-menu').addClass('dr-menu-open');
+			}, 50);
+			
+			guide = true;
+			console.log("Shown");
+			}
+		});
+
+		$('span.dr-icon-menu').on('click', function(e) {
+			if(guide)
+			{
+			 $('nav.dr-menu').removeClass('dr-menu-open');
+			setTimeout( function() 
+			{
+			//$('div.videoAssembly').css('margin-left', '30px');
+			//$('div.videoAssembly').css('margin-right', '2%');
+			$('#start').css('color', '');
+			$('div.side').css('display', 'none');
+			}, 100);						
+			guide = false;	
+			}
+		});
+
+		
+		//Search Bar Animation JQuery
+		$('#searchInput > input[type="text"]').on('focus', function(e) {
+				$(this).animate({ width: "350px"}, 500);					
+		});
+
+		$('#searchInput > input[type="text"]').on('blur', function(e) {
+				$(this).animate({ width: ""+temp}, 500);
+		});
+
+
+});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+
+			<header class="clearfix">
+				<div class="branding">
+					<img id="logo" src="logo_md.png">
+					<div id="start" class="dr-icon dr-icon-menu"></div>					
+				</div>
+				<div class="searchForm">
+					<form>
+					<div class="searchComponent">
+						<span id="searchInput">
+							<input placeholder="Search GVIDOC" type="text" />
+							<button>
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+					</form>
+				</div>
+
+				<div class="rightHead">
+					<button>
+						<i class="fa fa-cog fa-spin"></i>
+					</button>
+				</div>				
+			</header>
+
+			<header class="clearfix" id="subhead">
+				<div class="branding">
+								
+				</div>				
+			</header>
+
+			<div class="main">				
+				<div class="side">
+					<nav class="dr-menu">
+						<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Guide</a></div>
+						<ul>
+							<li><a class="dr-icon dr-icon-user" href="#">1</a></li>
+							<li><a class="dr-icon dr-icon-camera" href="#">Videos</a></li>
+							<li><a class="dr-icon dr-icon-heart" href="#">Favorites</a></li>
+							<li><a class="dr-icon dr-icon-bullhorn" href="#">Subscriptions</a></li>
+							<li><a class="dr-icon dr-icon-download" href="#">Downloads</a></li>
+							<li><a class="dr-icon dr-icon-settings" href="#">Settings</a></li>
+							<li><a class="dr-icon dr-icon-switch" href="#">Logout</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				 <div class="RightPanel stitched">
+
+				 	<div class="widget">
+						<div class="rtitle">
+							Find us on
+							<i class="fa fa-share-alt"></i>
+						</div>
+							<ul class="social">
+								<li><i class="fa fa-facebook-square"></i></li>
+								<li><i class="fa fa-google-plus-square"></i></li>
+							</ul>
+					</div>
+
+					<div class="widget">
+						<div class="rtitle">
+							Trending
+							<i class="fa fa-play-circle"></i>
+						</div>
+							<ul>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+								<li>Modern Marvels - Aircraft Carrier</li>
+							</ul>
+					</div>
+				</div>
+
+
+
+				
+
+
+				
+				<div class="videoAssembly"><!-- Video Assembly Start -->
+					<h2 id="astitle">
+						<i class="fa fa-video-camera"></i>
+						Modern Marvels						
+					</h2>
+				<div class="sub root" data-length="9:59:59" data-videoID="1" data-title="Modern Marvels - Aircraft Carrier">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="2" data-title="Modern Marvels - Atomic Energy Jubilee Edition DVD Rip">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="3" data-title="Modern Marvels - Tools Jubilee">
+						<span><img src="https://i1.ytimg.com/vi/m5_AKjDdqaU/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 days ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="4" data-title="Modern Marvels - Power Tools">
+						<span><img src="https://i1.ytimg.com/vi/Mzp6fjCFHwQ/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Electricity">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 month ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="6" data-title="Modern Marvels - Supersonic Jets">
+						<span><img src="https://i1.ytimg.com/vi/pFduRqWrnMw/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="7" data-title="Modern Marvels - Medicines Jubilee Edition DVD Rip">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 year ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="7" data-title="Modern Marvels - Medicines Jubilee Edition DVD Rip">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 year ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="7" data-title="Modern Marvels - Medicines Jubilee Edition DVD Rip">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 year ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="7" data-title="Modern Marvels - Medicines Jubilee Edition DVD Rip">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 year ago </small></span></div>
+				</div>								
+			</div><!-- Video Assembly Ends Here -->
+
+
+
+			<div class="videoAssembly"><!-- Video Assembly Start -->
+					<h2 id="astitle">
+						<i class="fa fa-video-camera"></i>
+						Modern Marvels
+					</h2>
+				<div class="sub root" data-length="17:04" data-videoID="1" data-title="Modern Marvels - Aircraft Carrier">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="2" data-title="Modern Marvels - Atomic Energy Jubilee Edition DVD Rip">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="3" data-title="Modern Marvels - Tools Jubilee">
+						<span><img src="https://i1.ytimg.com/vi/m5_AKjDdqaU/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 days ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="4" data-title="Modern Marvels - Power Tools">
+						<span><img src="https://i1.ytimg.com/vi/Mzp6fjCFHwQ/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Electricity">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 12 month ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="6" data-title="Modern Marvels - Supersonic Jets">
+						<span><img src="https://i1.ytimg.com/vi/pFduRqWrnMw/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 day ago </small></span></div>
+				</div>
+				<div class="sub root" data-length="17:04" data-videoID="7" data-title="Modern Marvels - Medicines Jubilee Edition DVD Rip">
+						<span><img src="http://i1.ytimg.com/vi/Pmva-DvaHvM/mqdefault.jpg" width="175"></span>
+						<div class='description'>  
+					    <!-- description content -->  
+					    <div class='description_content'>17:04</div>  
+					    <!-- end description content -->  
+						</div>
+						<div class="video title"></div>
+						<div><small> Modern Marvels </small><span style="float: right;"><small> 1 year ago </small></span></div>
+				</div>								
+			</div><!-- Video Assembly Ends Here -->			
+			
+			</div>
+
+		</div><!-- /container -->
+		<div class="push"></div>
+		</div>
+
+ 		<div class="loading" id="loading">
+ 			Wait a moment... it's loading!
+ 		</div>
+
+    	<div class="loading" id="nomoreresults">
+    		Sorry, no more results for your pagination demo.
+    	</div>
+
+	    <footer class="footer">
+	   		
+	   		<div class="footing">
+				<img id="logo" src="logo_md.png">
+			</div>
+
+			<div class="footing menu">
+				<span>Home</span>
+				<span>About Us</span>
+				<span>Developers</span>
+				<span>Contribute</span>
+				<span>Help</span>
+			</div>
+
+			<div class="footing right menu">
+				<div>GVIDOC 2013-2014</div>
+				<div class="right">
+					<i class="fa fa-facebook-square"></i>
+					<i class="fa fa-google-plus-square"></i>
+				</div>
+			</div>
+
+
+		</footer>	
+	</body>
+</html>

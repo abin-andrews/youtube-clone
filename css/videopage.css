@@ -1,0 +1,349 @@
+.last-center
+{
+	text-align: center;
+	background-color: black;	
+}
+
+.last-center > button
+{
+	padding: 0px 10px 0px 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: black;
+	color: #e8e8e8;
+}
+
+.gvidoc
+{
+	font-family: sans-serif;
+	padding-left: 10px;
+}
+
+.title
+{
+	font-size: 24px;
+	font-weight: 900;
+}
+
+.bar
+{
+	display: inline-block;
+}
+
+.spacing-info
+{
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.top-spacing
+{
+	margin-top: 10px;
+}
+
+.side-spacing
+{
+	margin-left: 10px;
+}
+
+.align-top
+{
+	vertical-align: top;
+}
+
+/*Text Align Center*/
+.text-center
+{
+	text-align: center;
+}
+
+.line-bar
+{
+	display: inline;
+}
+
+.like
+{
+
+	float: left;
+	height: 2px;
+	background-color: green;
+}
+
+.dislike
+{
+	float: left;
+	height: 2px;
+	background-color: red;
+}
+
+.like-meter
+{
+	position: relative;
+	min-width: 160px;
+	max-width: 220px;
+}
+
+
+
+.series
+{
+
+}
+
+.views
+{
+
+}
+
+.logo
+{
+	opacity: 0.0;
+	-webkit-transition: opacity 4s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 4s;	
+}
+
+.load
+{
+	opacity: 1.0;
+}
+
+img#logo {
+-webkit-filter: grayscale(0);
+filter: grayscale(0);
+filter: url(#greyscale);
+filter: none;
+transition: 1s;
+}
+
+img#logo:hover {
+
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+filter: gray;
+
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* STYLES GO HERE */
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* STYLES GO HERE */
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* STYLES GO HERE */
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* STYLES GO HERE */
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) 
+{
+
+.gvidplayer
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.videoAssembly
+{
+	max-width: 90%;
+    margin: 0 auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.video
+{
+	display:inline;
+	width: 80%;
+}
+
+.remove
+{
+	display: none;
+}
+
+.theatre
+{
+	max-width: 100%;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #1b1b1b;
+
+	-moz-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+}
+
+.normal
+{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.small
+{
+	width: 100%;
+}
+
+
+
+.extra
+{
+	display: inline;
+	width: 20%;
+	margin-left: -1px;
+}
+
+.player
+{
+	width: 75%;
+	vertical-align: top;	
+}
+
+.info
+{
+	width: 100%;
+	border: 1px solid #e8e8e8;
+	border-bottom: none;
+}
+
+.panel
+{
+	position: relative;
+	width: 20%;
+	border: none;
+	margin-top: -390px;
+	border: 1px solid #e8e8e8;
+	-moz-transition: margin-top .3s ease-in-out,padding-top .3s ease-in-out;
+	-webkit-transition: margin-top .3s ease-in-out,padding-top .3s ease-in-out;
+	transition: margin-top .3s ease-in-out,padding-top .3s ease-in-out;
+}
+
+#ytplayer
+{
+	width: 75%;
+	height: 390px;
+	-moz-transition: width .3s ease-in-out, height .3s ease-in-out;
+	-webkit-transition: width .3s ease-in-out, height .3s ease-in-out;
+	transition: width .3s ease-in-out, height .3s ease-in-out;
+}
+}
+ 
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* STYLES GO HERE */
+.gvidplayer
+{
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #e8e8e8;
+}
+
+.videoAssembly
+{
+	max-width: 65%;
+    margin: 0 auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.video
+{
+	display:inline;
+	width: 80%;
+}
+
+
+
+.extra
+{
+	display: inline;
+	width: 20%;
+	margin-left: -1px;
+}
+
+.player
+{
+	width: 75%;
+	vertical-align: top;
+
+}
+
+.info
+{
+	width: 100%;
+}
+
+.panel
+{
+	width: 20%;
+}
+
+#ytplayer
+{
+	width: 100%;
+	height: 580px;
+}
+
+
+}
+ 
+/* iPhone 5 (portrait & landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+/* STYLES GO HERE */
+}
+ 
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+/* STYLES GO HERE */
+}
+ 
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+/* STYLES GO HERE */
+}
