@@ -34,29 +34,29 @@ function LoadGvidocThumbnails(selector)
         $(this).css('display', 'block');  
     });  
   
-    $('div.sub').hover(function(){  
+    $('div.sub > span').hover(function(){  
         //when mouse hover over the wrapper div  
         //get it's children elements with class description '  
-        //and show it using fadeTo        
-        $(this).children('.description').html('<a class="dr-icon dr-icon-camera viewer"></a>');
-        $(this).children('.description').css('right', '10px');
-        $(this).children('.description').css('background-color', 'grey');
-        $(this).children('.description').css('padding', 2);
-        $(this).children('.description').css('margin', 1);
-        $(this).children('.description').css('z-index', 1000);
-        $(this).children('.description').stop().fadeTo(500, 0.9);
+        //and show it using fadeTo
+        $(this).siblings('.description').html('<a class="dr-icon dr-icon-camera viewer"></a>');
+        $(this).siblings('.description').css('right', '10px');
+        $(this).siblings('.description').css('background-color', 'grey');
+        $(this).siblings('.description').css('padding', 2);
+        $(this).siblings('.description').css('margin', 1);
+        $(this).siblings('.description').css('z-index', 1000);
+        $(this).siblings('.description').stop().fadeTo(500, 0.9);
     //    console.log('Yes 1');
 
     },function(){  
         //when mouse out of the wrapper div  
         //use fadeTo to hide the div        
-        $(this).children('.description').text($(this).data('length'));        
-        $(this).children('.description').css('right', '0px');
-        $(this).children('.description').css('background-color', 'black'); 
-        $(this).children('.description').css('padding', '');
-        $(this).children('.description').css('margin', '');
-        $(this).children('.description').css('z-index', '');
-        $(this).children('.description').stop().fadeTo(500, 1);
+        $(this).siblings('.description').text($(this).parent().data('length'));        
+        $(this).siblings('.description').css('right', '0px');
+        $(this).siblings('.description').css('background-color', 'black'); 
+        $(this).siblings('.description').css('padding', '');
+        $(this).siblings('.description').css('margin', '');
+        $(this).siblings('.description').css('z-index', '');
+        $(this).siblings('.description').stop().fadeTo(500, 1);
     //if    console.log('Yes 1');       
     });
 	

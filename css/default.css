@@ -198,6 +198,24 @@ div.description_content{
 	width: auto;    
 }
 
+div.title:hover
+{
+	color: #167ac6;
+}
+
+
+span.history
+{
+	font-size: 11.5px;
+	
+}
+
+span.deemphasized
+{
+	color: #999;
+}
+
+
 * {
 	margin: 0;
 	}
@@ -249,6 +267,8 @@ div.description_content{
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
 	padding: 1em 0em 1em 0em;	
 }
+
+
 
 .rtitle
 {
