@@ -47,6 +47,49 @@ body {
 background: #f1f1f1;
 }
 
+
+
+
+
+
+/* CSS for Watch it Later Feature */
+
+.hide
+{
+	display: none;
+}
+
+.button
+{
+	z-index: 2;
+	border: 1.5px solid #AAA;
+	border-radius: 5px;
+}
+
+.cursor
+{
+	cursor: pointer;
+}
+
+.video-actions
+{
+	opacity: 1;
+}
+
+img.watch-it-later-icon
+{
+	background:  no-repeat url(../watch.png) -16px -445px
+}
+
+span.description_content
+{
+	background-color: rgba(14, 14, 14, 0.6);
+}
+
+
+
+/* CSS for Watch it Later Feature ending  */
+
 a {
 	color: #f0f0f0;
 	text-decoration: none;
@@ -184,10 +227,9 @@ div.branding {
 
 div.description{  
     position:absolute; /* absolute position (so we can position it where we want)*/      
-    right:0px;  
+    right:5px;  
     display:none; /* hide it */  
-    /* styling bellow */  
-    background-color:black;  
+    /* styling bellow */ 
     font-family: 'tahoma';  
     font-size:15px;  
     color:white;  
@@ -203,6 +245,21 @@ div.title:hover
 	color: #167ac6;
 }
 
+/*
+div.sub > span > img
+{
+-webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+div.sub > span > img:hover
+{
+-webkit-filter: grayscale(100%);
+}
+*/
 
 span.history
 {
