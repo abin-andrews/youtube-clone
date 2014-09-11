@@ -44,7 +44,7 @@ function LoadGvidocThumbnails(selector)
         $(this).siblings('.description').children('.description_content').children('button').removeClass('hide');
         $(this).siblings('.description').children('.description_content').children('span.description_content').addClass('hide');
         
-        console.log('Yes 1');
+        //console.log('Yes 1');
 
     },function(){  
         //when mouse out of the wrapper div  
@@ -53,19 +53,19 @@ function LoadGvidocThumbnails(selector)
         $(this).siblings('.description').children('.description_content').children('span.description_content').removeClass('hide');
         $(this).siblings('.description').stop().fadeTo(500, 1);
         
-        console.log('Yes 2');       
+        //console.log('Yes 2');       
     });
 
 
     $('div.description_content > button.watch-it-later').hover(function() {
 
-        console.log('Yes A');
+        //console.log('Yes A');
         $(this).siblings('span.description_content').addClass('hide');
         $(this).removeClass('hide');
 
     }, function() {
 
-         console.log('Yes B');
+         //console.log('Yes B');
          $(this).addClass('hide');
          $(this).siblings('span.description_content').removeClass('hide');
 

@@ -81,6 +81,8 @@
 	transform: translateY(-90%);
 }
 
+
+
 .dr-menu ul {
 	padding: 0;
 	margin: 0 3em 0 0;
@@ -89,9 +91,9 @@
 	position: relative;
 	z-index: 0;
 	pointer-events: none;
-	-webkit-transition: opacity 0s linear 205ms;
-	-moz-transition: opacity 0s linear 205ms;
-	transition: opacity 0s linear 205ms;
+	-webkit-transition: opacity 0.5s linear 205ms;
+	-moz-transition: opacity 0.5s linear 205ms;
+	transition: opacity 0.5s linear 205ms;
 }
 
 .dr-menu.dr-menu-open ul {

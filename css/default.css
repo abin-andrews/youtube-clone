@@ -107,7 +107,6 @@ div.branding {
 	display: inline;	
 }
 
-.main,
 .container > header {
 	width: 100%;
 	margin: 0 auto;	
@@ -121,14 +120,30 @@ div.branding {
 .side {
 	position: fixed;
 	float: left;
-	min-width: 260px;
+	left: 0;
+	/*min-width: 260px;*/
 	box-shadow: 1px 0 rgba(0,0,0,0.1);
 	background: #f0f0f0;
-	min-height: 75%;
+	min-height: 95%;
 	max-width: 260px;
 	/*top: 5%;*/
 	z-index: 1000;
 	margin-top: -5%;
+	box-shadow: 5px 10px 15px 5px rgba(0,0,0,.1);
+
+	-webkit-transition-property: margin-top, min-height; /* Safari */
+	-moz-transition-property: margin-top, min-height; 
+	transition-property: margin-top, min-height; 
+	
+	-webkit-transition-duration: 1.5s, 1.2s;/* Safari */
+	-moz-transition-duration: 1.5s, 1.2s;
+	transition-duration: 1.5s, 1.2s;
+
+	-webkit-transition-timing-function: ease; /* Safari and Chrome */
+    transition-timing-function: ease;
+
+
+	
 }
 
 .main p {
@@ -165,6 +180,11 @@ div.branding {
 	width: 175px;
 	margin: 0.2em;
 	position: relative;
+
+	-webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms  linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
 }
 
 /* Header Style */
@@ -289,7 +309,7 @@ span.deemphasized
 	}
 
 @media screen and (max-width: 66.9375em) {
-	.side, .main p {
+	.side {
 		float: none;
 		width: 100%;
 		box-shadow: none;
@@ -556,19 +576,129 @@ div.right
 
 
 /* Responsive Media Queries */
-@media all and (min-width: 1001px) {
-  .side {
-  	background-color: blue;
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+/* For largest screens */
+@media only screen and (min-width : 1824px) {
+	.side
+	{
+		background-color: black;
+		margin-top: -3%;		
+	}
+
+	.main 
+	{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.sub
+	{
+		
+		width: 194px;
+	}
+
+	div.sub > span > img
+	{
+		width: 194px;
+	}
+
+	.videoAssembly
+	{
+	  	padding-left: 5%;
+	}
+}
 
 
+
+@media all and (min-width: 1600px)  and (max-width: 1823px){
+
+	.main 
+	{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.sub
+	{
+		
+		width: 194px;
+	}
+
+	div.sub > span > img
+	{
+		width: 194px;
+	}
+
+	.videoAssembly
+	{
+	  	padding-left: 2.5%;
+	}
+
+}
+
+
+@media all and (min-width: 1001px)  and (max-width: 1599px){
+  .side 
+  {
+  	background-color: white;
+  	margin-top: -5%;
   }
+
+  .videoAssembly
+	{
+	  	padding-left: 1.75%;
+	}
 }
 
 @media all and (max-width: 1000px) and (min-width: 700px) {
-  .side {
-  	background-color: green;
+  .side {  	
   	width: 25%;
-  }
+  }  
 
   .videoAssembly
   {
@@ -603,3 +733,5 @@ div.right
   	display: none;
   }
 }
+
+
