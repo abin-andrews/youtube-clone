@@ -181,10 +181,15 @@ div.branding {
 	margin: 0.2em;
 	position: relative;
 
-	-webkit-transition: all 500ms linear;
-    -moz-transition: all 500ms  linear;
-    -o-transition: all 500ms linear;
-    transition: all 500ms linear;
+	-webkit-transition: all 500ms cubic-bezier(1.000, 0.225, 0.830, 0.595); 
+   -moz-transition: all 500ms cubic-bezier(1.000, 0.225, 0.830, 0.595); 
+     -o-transition: all 500ms cubic-bezier(1.000, 0.225, 0.830, 0.595); 
+        transition: all 500ms cubic-bezier(1.000, 0.225, 0.830, 0.595); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(1.000, 0.225, 0.830, 0.595); 
+   -moz-transition-timing-function: cubic-bezier(1.000, 0.225, 0.830, 0.595); 
+     -o-transition-timing-function: cubic-bezier(1.000, 0.225, 0.830, 0.595); 
+        transition-timing-function: cubic-bezier(1.000, 0.225, 0.830, 0.595); /* custom */
 }
 
 /* Header Style */
@@ -268,21 +273,16 @@ div.title:hover
 	color: #167ac6;
 }
 
-/*
+
 div.sub > span > img
 {
--webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;
+	-webkit-transition: all 1000ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
 }
 
 div.sub > span > img:hover
 {
--webkit-filter: grayscale(100%);
+-webkit-transform: scale(1.1);
 }
-*/
 
 span.history
 {
@@ -509,8 +509,7 @@ box-shadow: 0 0 10px 5px white, 0px 0px 120px yellow, 0px 20px 420px red;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-left: -3px;
-	background-color: #ECECEC;
-	width: 75px;
+	background-color: #ECECEC;	
 }
 
 ::-webkit-input-placeholder 
@@ -622,7 +621,6 @@ div.right
 /* Styles */
 }
 
-/* For largest screens */
 @media only screen and (min-width : 1824px) {
 	.side
 	{
@@ -655,7 +653,7 @@ div.right
 
 
 
-@media all and (min-width: 1600px)  and (max-width: 1823px){
+@media only screen and (min-width: 1600px)  and (max-width: 1823px){
 
 	.main 
 	{
@@ -682,11 +680,15 @@ div.right
 }
 
 
-@media all and (min-width: 1001px)  and (max-width: 1599px){
+@media only screen and (min-width: 1001px)  and (max-width: 1599px){
   .side 
   {
   	background-color: white;
   	margin-top: -5%;
+  }
+
+  .sub {
+  	margin: 0.1em;  	
   }
 
   .videoAssembly
@@ -695,7 +697,7 @@ div.right
 	}
 }
 
-@media all and (max-width: 1000px) and (min-width: 700px) {
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
   .side {  	
   	width: 25%;
   }  
@@ -707,15 +709,15 @@ div.right
     
 }
 
-@media all and (max-width: 699px) and (min-width: 520px){
+@media only screen and (max-width: 699px) and (min-width: 520px){
   .side {
-  	background-color: red;
+  	
   	width: 25%;
   }
 
   .videoAssembly
   {
-  	max-width: 70%
+  	max-width: 70%;
   }
 
   .RightPanel
@@ -725,13 +727,59 @@ div.right
 
   	padding: 1px;
   }
+
+
+  .sub
+	{
+		margin-left: 5%;		
+		
+	}
+
+	div.sub > span > img
+	{
+		
+	}
+
  }
 
-@media all and (max-width: 519px) and (min-width: 100px){
-  .side {
-  	background-color: yellow;
+@media only screen and (max-width: 519px) and (min-width: 300px){  
+
+  .RightPanel
+  {
   	display: none;
   }
+
+  .videoAssembly
+  {
+  	max-width: 100%;
+  }
+
+  .sub
+	{
+		margin-left: 10%;		
+		width: 240px;
+	}
+
+	div.sub > span > img
+	{
+		width: 240px;
+	}
+
+	div.description {
+		top: 110px;
+	}
+
+	#searchInput > input {
+		width: 200px;
+	}
+
+	.searchForm
+	{
+		margin-left: 0px;
+	}
+
+	.rightHead
+	{
+		display: none;
+	}
 }
-
-

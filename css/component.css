@@ -40,10 +40,10 @@
 .dr-menu.dr-menu-open > div .dr-icon {
 	color: #60a773;
 	left: 100%;
-	-webkit-transform: translateX(-100%);
-	-moz-transform: translateX(-100%);
-	-ms-transform: translateX(-100%);
-	transform: translateX(-100%);
+	-webkit-transform: translate(-100%, -20%);
+	-moz-transform: translate(-100%, -20%);
+	-ms-transform: translate(-100%, -20%);
+	transform: translate(-100%, -20%);
 }
 
 .dr-menu > div .dr-icon:after {

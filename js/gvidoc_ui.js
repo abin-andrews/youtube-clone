@@ -142,10 +142,12 @@ jQuery(window).resize(function () {
 		
 		//Search Bar Animation JQuery
 		$('#searchInput > input[type="text"]').on('focus', function(e) {
+			if(viewPortWidth > 700)
 				$(this).animate({ width: "350px"}, 500);					
 		});
 
 		$('#searchInput > input[type="text"]').on('blur', function(e) {
+			if(viewPortWidth > 700)
 				$(this).animate({ width: ""+temp}, 500);
 		});
 
