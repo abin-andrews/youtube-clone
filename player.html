@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>GVIDOC</title>
+		<meta name="description" content="A tutorial on how to recreate the effect of YouTube's little left side menu. The idea is to slide a little menu icon to the right side while revealing some menu item list beneath. " />
+		<meta name="keywords" content="Add keywords" />
+		<meta name="author" content="_yourName_ for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/nprogress.css" />	
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/videopage.css" />
+
+		<script type="text/javascript" src="js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/scrollpagination.js"></script>
+		<script type="text/javascript" src='js/nprogress.js'></script>
+		<script type="text/javascript" src="js/gvidoc.js"></script>
+		<script type="text/javascript" src="js/jquery.visible.js"></script>	
+		<script type="text/javascript" src="js/gvidoc_player.js"></script>		
+		
+
+</head>
+<body>
+
+	<div class="container">
+
+		<header class="clearfix">
+				<div class="branding">
+					<img class="logo" id="logo" src="logo_md.png">
+					<div id="start" class="dr-icon dr-icon-menu"></div>					
+				</div>
+				<div class="searchForm">
+					<form>
+					<div class="searchComponent">
+						<span id="searchInput">
+							<input placeholder="Search GVIDOC" type="text" />
+							<button>
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+					</form>
+				</div>
+
+				<div class="rightHead">
+					<button>
+						<i class="fa fa-cog fa-spin"></i>
+					</button>
+				</div>				
+			</header>
+
+			<header class="clearfix" id="subhead">
+				<div class="branding">
+								
+				</div>				
+			</header>
+
+			<div class="main">				
+				<div class="side">
+					<nav class="dr-menu">
+						<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Guide</a></div>
+						<ul>
+							<li><a class="dr-icon dr-icon-user" href="#">1</a></li>
+							<li><a class="dr-icon dr-icon-camera" href="#">Videos</a></li>
+							<li><a class="dr-icon dr-icon-heart" href="#">Favorites</a></li>
+							<li><a class="dr-icon dr-icon-bullhorn" href="#">Subscriptions</a></li>
+							<li><a class="dr-icon dr-icon-download" href="#">Downloads</a></li>
+							<li><a class="dr-icon dr-icon-settings" href="#">Settings</a></li>
+							<li><a class="dr-icon dr-icon-switch" href="#">Logout</a></li>
+						</ul>
+					</nav>
+				</div>
+				
+
+	<div class="videoAssembly small left gvidplayer normal" id="theatre-mode">
+		<iframe id="ytplayer" src="//www.youtube.com/embed/Z-W66HINFLg?enablejsapi=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+				
+	<div class="videoAssembly gvidplayer"><!-- Video Assembly Start -->
+	<div class="sub root player left gvidplayer" id="normal-mode">
+			
+			
+<!-- <script>
+// Inject YouTube API script
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+//http://www.youtube.com/watch?v=Z-W66HINFLg
+var player;
+
+function onYouTubePlayerAPIReady() {
+  // create the global player from the specific iframe (#video)
+  player = new YT.Player('ytplayer', {
+    events: {
+      // call this function when player is ready to use
+      'onReady': onPlayerReady,
+      'onStateChange' : onPlayerStateChanged
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  
+  // bind events
+  //player.playVideo();
+
+  
+}
+
+function onPlayerStateChanged(event)
+{
+	switch(event.data)
+	{
+		case -1:
+		document.title = "unstarted";
+		break;
+
+		case 0:
+		document.title = "ended";
+		break;
+
+		case 1:
+		document.title = "playing";
+		break;
+
+		case 2:
+		document.title = "paused";
+		break;
+
+		case 3:
+		document.title = "buffering";
+		break;
+
+		case 5:
+		document.title = "cued";
+		break;
+	}
+}
+
+function stopPlay()
+{
+	player.stopVideo();
+}
+</script>
+-->
+	<div class="info player " id="controls">
+
+		<div>
+		<button id="theatremode">Theatre Mode</button>
+		</div>
+
+		
+		<div class="gvidoc title">
+			LG G-Flex Self Healing Demo _ MKBHD
+		</div>
+
+		<div class="gvidoc bar  top-spacing">			
+			<div>
+				<span><img alt="Samsung Mobile" src="https://yt3.ggpht.com/-FYVhSQqONp8/AAAAAAAAAAI/AAAAAAAAAAA/MhkO2Tsaj8E/s88-c-k-no/photo.jpg" width="48" height="48">				
+				<div class="bar align-top side-spacing">
+					<div>Samsung Mobile</div>
+					<div>Subscribe</div>
+				</div>				
+				</span>					
+			</div>			
+		</div>
+
+		<div class="gvidoc bar right spacing-info  ">
+			<div class="title views right" id="gvid-views">322,5557</div>
+			<div class="like-meter">
+				<div class="line-bar like " style="width:50%;"></div>
+				<div class="line-bar dislike " style="width:50%;"></div>
+			</div>
+		</div>
+
+		<div class="gvidoc">
+			<div class="line-bar">A</div>
+			<div class="line-bar right">B</div>
+		</div>
+		
+
+
+	</div>
+
+	
+
+		</div>
+		
+		<div class="sub root panel" id="suggest">
+			<div class="widget">
+				<div class="rtitle">
+				Trending
+				<i class="fa fa-play-circle"></i>
+				</div>
+				<ul>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				<li>Modern Marvels - Aircraft Carrier</li>
+				</ul>
+			</div>
+		</div>
+
+				
+	</div><!-- Video Assembly Ends Here -->
+
+
+
+			
+			</div>
+
+		</div><!-- /container -->
+		
+		<div class="push"></div>
+		</div>
+
+ 		<footer class="footer">
+	   		
+	   		<div class="footing">
+				<img id="logo" src="logo_md.png">
+			</div>
+
+			<div class="footing menu">
+				<span>Home</span>
+				<span>About Us</span>
+				<span>Developers</span>
+				<span>Contribute</span>
+				<span>Help</span>
+			</div>
+
+			<div class="footing right menu">
+				<div>GVIDOC 2013-2014</div>
+				<div class="right">
+					<i class="fa fa-facebook-square"></i>
+					<i class="fa fa-google-plus-square"></i>
+				</div>
+			</div>
+
+
+		</footer>	
+	</body>
+</html>

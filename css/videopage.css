@@ -124,51 +124,234 @@ filter: gray;
 
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-/* STYLES GO HERE */
+
+.full
+{
+	margin-left: 0%;
+	margin-right: 0%;
+
+	-moz-transition: all.3s ease-in-out,background-image .3s ease-in-out;
+	-webkit-transition: all.3s ease-in-out,background-image .3s ease-in-out;
+	transition: all.3s ease-in-out,background-image .3s ease-in-out;
 }
- 
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 321px) {
-/* STYLES GO HERE */
+
+/* Responsive Media Queries */
+
+
+@media only screen and (max-width: 519px) and (min-width: 300px) {
+.gvidplayer
+{
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #e8e8e8;
 }
- 
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
-/* STYLES GO HERE */
+
+.videoAssembly
+{
+	max-width: 85%;
+    margin: 0 auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
- 
-/* iPads (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px) {
-/* STYLES GO HERE */
+
+.video
+{
+	display:inline;
+	width: 80%;
 }
- 
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-/* STYLES GO HERE */
+
+
+
+.extra
+{
+	display: inline;
+	width: 20%;
+	margin-left: -1px;
 }
- 
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-/* STYLES GO HERE */
+
+.player
+{
+	width: 100%;
+	vertical-align: top;
+
+}
+
+.info
+{
+	width: 100%;
+}
+
+.panel
+{
+	width: 20%;
+}
+
+#ytplayer
+{
+	width: 100%;
+	min-height: 25%;
+}
+
+#suggest
+{
+	margin-top: 0;
+}
+}
+
+@media only screen and (max-width: 699px) and (min-width: 520px) {
+.gvidplayer
+{
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #e8e8e8;
+}
+
+.videoAssembly
+{
+	max-width: 85%;
+    margin: 0 auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.video
+{
+	display:inline;
+	width: 80%;
+}
+
+
+
+.extra
+{
+	display: inline;
+	width: 20%;
+	margin-left: -1px;
+}
+
+.player
+{
+	width: 100%;
+	vertical-align: top;
+
+}
+
+.info
+{
+	width: 100%;
+}
+
+.panel
+{
+	width: 20%;
+}
+
+#ytplayer
+{
+	width: 100%;
+	min-height: 25%;
+}
+
+#suggest
+{
+	margin-top: 0;
+}
+
+.theatre
+{
+	max-width: 100%;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #1b1b1b;
+
+	-moz-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+}
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+.gvidplayer
+{
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #e8e8e8;
+}
+
+.videoAssembly
+{
+	max-width: 85%;
+    margin: 0 auto;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.video
+{
+	display:inline;
+	width: 80%;
+}
+
+
+
+.extra
+{
+	display: inline;
+	width: 20%;
+	margin-left: -1px;
+}
+
+.player
+{
+	width: 75%;
+	vertical-align: top;
+
+}
+
+.info
+{
+	width: 100%;
+}
+
+.panel
+{
+	width: 20%;
+}
+
+#ytplayer
+{
+	width: 100%;
+	min-height: 65%;
+}
+
+#suggest
+{
+	margin-top: 0;
+}
+
+.theatre
+{
+	max-width: 100%;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #1b1b1b;
+
+	-moz-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+}
+
+
 }
  
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) 
-{
+@media only screen and (max-width: 1584px ) and (min-width: 1001px) {
 
 .gvidplayer
 {
@@ -247,7 +430,7 @@ and (orientation : portrait) {
 	position: relative;
 	width: 20%;
 	border: none;
-	margin-top: -390px;
+	margin-top: -440px;	
 	border: 1px solid #e8e8e8;
 	-moz-transition: margin-top .3s ease-in-out,padding-top .3s ease-in-out;
 	-webkit-transition: margin-top .3s ease-in-out,padding-top .3s ease-in-out;
@@ -257,17 +440,17 @@ and (orientation : portrait) {
 #ytplayer
 {
 	width: 75%;
-	height: 390px;
+	height: 440px;
 	-moz-transition: width .3s ease-in-out, height .3s ease-in-out;
 	-webkit-transition: width .3s ease-in-out, height .3s ease-in-out;
 	transition: width .3s ease-in-out, height .3s ease-in-out;
 }
 }
- 
+
 /* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-/* STYLES GO HERE */
+@media only screen and (min-width : 1585px) {
+
+
 .gvidplayer
 {
 	margin: 0px;
@@ -277,7 +460,7 @@ and (min-width : 1824px) {
 
 .videoAssembly
 {
-	max-width: 65%;
+	max-width: 70%;
     margin: 0 auto;
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -320,6 +503,24 @@ and (min-width : 1824px) {
 {
 	width: 100%;
 	height: 580px;
+}
+
+#suggest
+{
+	margin-top: 0;
+}
+
+.theatre
+{
+	max-width: 100%;
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #1b1b1b;
+
+	-moz-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
+	transition: background-color .3s ease-in-out,background-image .3s ease-in-out;
 }
 
 

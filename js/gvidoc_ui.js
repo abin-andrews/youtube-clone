@@ -15,7 +15,7 @@ var viewPortWidth = -1;
 
 	$('.main').scrollPagination({
 		'contentPage': 'data.html', // the url you are fetching the results
-		'contentData': 'data=Abin', // these are the variables you can pass to the request, for example: children().size() to know which page you are
+		'contentData': 'abin=Abin', // these are the variables you can pass to the request, for example: children().size() to know which page you are
 		'scrollTarget': $(window), // who gonna scroll? in this example, the full window
 		'heightOffset': 1, // it gonna request when scroll is 10 pixels before the page ends
 		'beforeLoad': function(){ // before load function, you can display a preloader div
@@ -40,10 +40,7 @@ var viewPortWidth = -1;
 			 else
 			 {
 			 	$('div.videoAssembly').css('margin-left', '1%');
-			 }
-			 
-			 //$('div.videoAssembly').css('margin-left', '300px');
-			
+			 }			
 		}
 	});
 });
