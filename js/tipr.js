@@ -33,10 +33,10 @@ http://www.tipue.com/tipr
                          var w_t = $(tipr_cont).outerWidth();
                          var w_e = $(this).width();
                          var m_l = (w_e / 2) - (w_t / 2);
-                         console.log(w_t);
+                         /*console.log(w_t);
                          console.log(w_e);
                          console.log(m_l);
-                         console.log(aa);
+                         console.log(aa);*/
 
 
                          $(tipr_cont).css('margin-left', m_l + 'px');

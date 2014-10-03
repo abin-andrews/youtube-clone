@@ -69,12 +69,12 @@ jQuery(window).resize(function () {
 			var defaultSide = $('div.side').css('width');
 
 			
-			console.log(defaultSide);
+			//console.log(defaultSide);
 			//$('div.videoAssembly').css('margin-left', '30px');
 
 			
 
-		LoadGvidocThumbnails();
+			LoadGvidocThumbnails();
 		
 		// Side Bar Animation  Script
 		$('#start').on('click', function(e) {

@@ -264,13 +264,77 @@ div.description{
     top: 75px;
 }
 
-div.description_content{
+span.description {
+	position:absolute; /* absolute position (so we can position it where we want)*/        
+    display:none; /* hide it */  
+    /* styling bellow */ 
+    font-family: 'tahoma';  
+    font-size:15px;  
+    color:white;  
+    top: 30px;
+    margin-left: 60px;
+}
+
+button.list-watch-it-later {
+	top: -1px;
+}
+
+
+.abs_pos
+{
+	position: absolute;
+	padding-left: 5px;
+	font-size: 14px;
+}
+
+.list-time
+{
+	font-size: 12px;
+}
+
+
+div.description_content, span.description_content{
 	width: auto;    
 }
 
-div.title:hover
+ul.trending-ul-list > li
+{
+	padding-left: 0px;
+	height: 60px;
+}
+
+span.list-video {
+	width: 95%;
+}
+
+div.title:hover, span.title:hover
 {
 	color: #167ac6;
+}
+
+.list-video-series {
+	position: relative;
+	top: -26px;
+	margin-left: 90px;
+	padding-top: 10px;
+	padding-left: 5px;
+	color: #999;
+}
+
+.hits
+{
+	float: right;
+	position: absolute;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.50);
+	color: whitesmoke;
+	padding: 2.5px;
+	font-size: 14px;
+}
+.list-over
+{
+	position: absolute;
+	top : -1px;
 }
 
 

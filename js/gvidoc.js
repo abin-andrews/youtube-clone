@@ -6,23 +6,33 @@
 //Reduce the length of the string to fill in a div correctly
 function DivTextAdjuster(text, length)
 {
-	if(text.length < 35)
+	if(text.length < length)
 	return text;
 
-	if(text.length > 35)
+	if(text.length > length)
 	return text.substring(0, length) + '...';
 }
 
 function LoadGvidocThumbnails(selector)
 {
-	selector = typeof selector !== 'undefined' ? selector : 'div.video';
-	$(selector).each(function() {			
-			var title = $(this).parent().data('title');
-			$(this).text(DivTextAdjuster(title, 35));
+	selector = typeof selector !== 'undefined' ? selector : 'div.video, span.video';
+	$(selector).each(function() {		
+			
+            if(this.localName == "span")
+            {
+                var title = $(this).parent().data('title');
+                $(this).text(DivTextAdjuster(title, 35));
+                $(this).siblings('div.deemphasized').addClass('list-video-series');
+            }
+            else
+            {
+                var title = $(this).parent().data('title');
+                $(this).text(DivTextAdjuster(title, 35));
+            }
 		});
 
 	//for each description div...  
-    $('div.description').each(function(){  
+    $('div.description, span.description').each(function(){  
     	//console.log("Yes Here");
         //...set the opacity to 0...  
         $(this).css('opacity', 1);  
@@ -36,7 +46,7 @@ function LoadGvidocThumbnails(selector)
   
 
  
-    $('div.sub > span').hover(function(){  
+    $('.sub > span.watcher').hover(function(){  
         //when mouse hover over the wrapper div  
         //get it's children elements with class description '  
         //and show it using fadeTo
@@ -57,7 +67,7 @@ function LoadGvidocThumbnails(selector)
     });
 
 
-    $('div.description_content > button.watch-it-later').hover(function() {
+    $('div.description_content > button.watch-it-later, span.description_content > button.watch-it-later ').hover(function() {
 
         //console.log('Yes A');
         $(this).siblings('span.description_content').addClass('hide');
