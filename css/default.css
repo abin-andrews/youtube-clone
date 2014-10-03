@@ -401,15 +401,13 @@ span.deemphasized
 
 .RightPanel
 {
+	position: relative;
 	float: right;	
+	clear: both;
 	min-width: 20%;
 	max-width: 20%;
 	margin-right: 1%;	
-	background: white; /* Old browsers */
-	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
-	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
-	padding: 1em 0em 1em 0em;	
+		
 }
 
 
@@ -425,6 +423,16 @@ span.deemphasized
 	font-size: 16px;
 	font-weight: bold;
 	font-family: sans-serif;
+}
+
+div.panel
+{
+	padding: 1em 0em 1em 0em;
+	margin-bottom: 1em;
+	background: white; /* Old browsers */
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
 div.widget
