@@ -14,13 +14,15 @@
 		<link rel="stylesheet" type="text/css" href="css/nprogress.css" />	
 		<link href="css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/videopage.css" />
+		<link rel="stylesheet" type="text/css" href="css/tipr.css">
 
 		<script type="text/javascript" src="js/modernizr.custom.js"></script>
 		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/tipr.js"></script>
 		<script type="text/javascript" src="js/scrollpagination.js"></script>
 		<script type="text/javascript" src='js/nprogress.js'></script>
 		<script type="text/javascript" src="js/gvidoc.js"></script>
-		<script type="text/javascript" src="js/jquery.visible.js"></script>	
+		<script type="text/javascript" src="js/jquery.visible.js"></script>
 		<script type="text/javascript" src="js/gvidoc_player.js"></script>		
 		
 
@@ -30,9 +32,9 @@
 	<div class="container">
 
 		<header class="clearfix">
-				<div class="branding">
-					<img class="logo" id="logo" src="logo_md.png">
-					<div id="start" class="dr-icon dr-icon-menu"></div>					
+				<div class="branding">					
+					<div id="start" class="dr-icon dr-icon-menu"></div>	
+					<img class="logo" id="logo" src="logo_md.png">				
 				</div>
 				<div class="searchForm">
 					<form>
@@ -81,7 +83,7 @@
 		<iframe id="ytplayer" src="//www.youtube.com/embed/Z-W66HINFLg?enablejsapi=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</div>
 				
-	<div class="videoAssembly gvidplayer"><!-- Video Assembly Start -->
+	<div class="videoAssembly gvidplayer info-player"><!-- Video Assembly Start -->
 	<div class="sub root player left gvidplayer" id="normal-mode">
 			
 			
@@ -200,43 +202,152 @@ function stopPlay()
 				Trending
 				<i class="fa fa-play-circle"></i>
 				</div>
-				<ul>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
-				<li>Modern Marvels - Aircraft Carrier</li>
+				<ul class="trending-ul-list">
+				<li>
+					<span class="sub root list-video" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Cars">
+						<span class="hits"></span>
+						<span class="watcher"><img src="http://i.ytimg.com/vi/LvBss_e59GE/mqdefault.jpg" width="90" ></span>
+						<span class='description list-over'>
+
+						<span class="description_content">
+							<span class="description_content list-time" >17:04</span>
+							<button class="hide cursor button watch-it-later video-actions tip list-watch-it-later" data-tip="Watch Later">
+						   		<span>
+						   			<img class="watch-it-later-icon" width="11" height="11" src="watch.png" />
+						   		</span>
+					   		</button>
+					   	</span>  
+					   	
+						</span>
+						<span class="video sug-title abs_pos "></span>
+						<div class="deemphasized list-extra"><small> Modern Marvels </small></div>										
+					</span>
+				</li>
+
+				<li>
+					<span class="sub root list-video" data-length="17:04" title="Modern Marvels - Electricity and Nicholas Tesla" data-videoID="5" data-title="Modern Marvels - Electricity and Nicholas Tesla">
+						<span class="hits"></span>
+						<span class="watcher"><img src="http://i.ytimg.com/vi/LvBss_e59GE/mqdefault.jpg" width="90" ></span>
+						<span class='description list-over'>
+
+						<span class="description_content">
+							<span class="description_content list-time" >17:04</span>
+							<button class="hide cursor button watch-it-later video-actions tip list-watch-it-later" data-tip="Watch Later">
+						   		<span>
+						   			<img class="watch-it-later-icon" width="11" height="11" src="watch.png" />
+						   		</span>
+					   		</button>
+					   	</span>  
+					   	
+						</span>
+						<span class="video sug-title abs_pos "></span>
+						<div class="deemphasized list-extra"><small> Modern Marvels </small></div>										
+					</span>
+				</li>
+
+				<li>
+					<span class="sub root list-video" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Electricity and Nicholas Tesla">
+						<span class="hits"></span>
+						<span class="watcher"><img src="http://i.ytimg.com/vi/LvBss_e59GE/mqdefault.jpg" width="90" ></span>
+						<span class='description list-over'>
+
+						<span class="description_content">
+							<span class="description_content list-time" >17:04</span>
+							<button class="hide cursor button watch-it-later video-actions tip list-watch-it-later" data-tip="Watch Later">
+						   		<span>
+						   			<img class="watch-it-later-icon" width="11" height="11" src="watch.png" />
+						   		</span>
+					   		</button>
+					   	</span>  
+					   	
+						</span>
+						<span class="video sug-title abs_pos "></span>
+						<div class="deemphasized list-extra"><small> Modern Marvels </small></div>										
+					</span>
+				</li>
+
+				<li>
+					<span class="sub root list-video" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Electricity and Nicholas Tesla">
+						<span class="hits"></span>
+						<span class="watcher"><img src="http://i.ytimg.com/vi/LvBss_e59GE/mqdefault.jpg" width="90" ></span>
+						<span class='description list-over'>
+
+						<span class="description_content">
+							<span class="description_content list-time" >17:04</span>
+							<button class="hide cursor button watch-it-later video-actions tip list-watch-it-later" data-tip="Watch Later">
+						   		<span>
+						   			<img class="watch-it-later-icon" width="11" height="11" src="watch.png" />
+						   		</span>
+					   		</button>
+					   	</span>  
+					   	
+						</span>
+						<span class="video sug-title abs_pos "></span>
+						<div class="deemphasized list-extra"><small> Modern Marvels </small></div>										
+					</span>
+				</li>
+
+				<li>
+					<span class="sub root list-video" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Electricity and Nicholas Tesla">
+						<span class="hits"></span>
+						<span class="watcher"><img src="http://i.ytimg.com/vi/LvBss_e59GE/mqdefault.jpg" width="90" ></span>
+						<span class='description list-over'>
+
+						<span class="description_content">
+							<span class="description_content list-time" >17:04</span>
+							<button class="hide cursor button watch-it-later video-actions tip list-watch-it-later" data-tip="Watch Later">
+						   		<span>
+						   			<img class="watch-it-later-icon" width="11" height="11" src="watch.png" />
+						   		</span>
+					   		</button>
+					   	</span>  
+					   	
+						</span>
+						<span class="video sug-title abs_pos "></span>
+						<div class="deemphasized list-extra"><small> Modern Marvels </small></div>										
+					</span>
+				</li>
+
+				<li>
+					<span class="sub root list-video" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Electricity and Nicholas Tesla">
+						<span class="hits"></span>
+						<span class="watcher"><img src="http://i.ytimg.com/vi/LvBss_e59GE/mqdefault.jpg" width="90" ></span>
+						<span class='description list-over'>
+
+						<span class="description_content">
+							<span class="description_content list-time" >17:04</span>
+							<button class="hide cursor button watch-it-later video-actions tip list-watch-it-later" data-tip="Watch Later">
+						   		<span>
+						   			<img class="watch-it-later-icon" width="11" height="11" src="watch.png" />
+						   		</span>
+					   		</button>
+					   	</span>  
+					   	
+						</span>
+						<span class="video sug-title abs_pos "></span>
+						<div class="deemphasized list-extra"><small> Modern Marvels </small></div>										
+					</span>
+				</li>
+				<li>
+					<span class="sub root list-video" data-length="17:04" data-videoID="5" data-title="Modern Marvels - Electricity and Nicholas Tesla">
+						<span class="hits"></span>
+						<span class="watcher"><img src="http://i.ytimg.com/vi/LvBss_e59GE/mqdefault.jpg" width="90" ></span>
+						<span class='description list-over'>
+
+						<span class="description_content">
+							<span class="description_content list-time" >17:04</span>
+							<button class="hide cursor button watch-it-later video-actions tip list-watch-it-later" data-tip="Watch Later">
+						   		<span>
+						   			<img class="watch-it-later-icon" width="11" height="11" src="watch.png" />
+						   		</span>
+					   		</button>
+					   	</span>  
+					   	
+						</span>
+						<span class="video sug-title abs_pos "></span>
+						<div class="deemphasized list-extra"><small> Modern Marvels </small></div>										
+					</span>
+				</li>
 				</ul>
 			</div>
 		</div>
@@ -279,4 +390,9 @@ function stopPlay()
 
 		</footer>	
 	</body>
+	<script>
+$(document).ready(function() {
+     $('.tip').tipr();
+});
+</script>
 </html>

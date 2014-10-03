@@ -4,8 +4,20 @@
 *
 */
 //Reduce the length of the string to fill in a div correctly
+
+var suggest = 0;
 function DivTextAdjuster(text, length)
 {
+    if($('#suggest').length)
+    {
+        if(suggest > 97)
+        {
+            length = 50;
+            if(text.length > length)
+            return text.substring(0, length) + '...';
+        }
+    }
+
 	if(text.length < length)
 	return text;
 
@@ -16,6 +28,11 @@ function DivTextAdjuster(text, length)
 function LoadGvidocThumbnails(selector)
 {
 	selector = typeof selector !== 'undefined' ? selector : 'div.video, span.video';
+    if($('#suggest').length)
+    {
+        suggest = $('#suggest').width() / $('#suggest').parent().width() * 100;
+        
+    }
 	$(selector).each(function() {		
 			
             if(this.localName == "span")

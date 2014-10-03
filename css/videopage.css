@@ -135,6 +135,19 @@ filter: gray;
 	transition: all.3s ease-in-out,background-image .3s ease-in-out;
 }
 
+.videoAssembly {
+	background: none;
+}
+
+.player
+{
+	background: white;
+	background: white; /* Old browsers */
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) ;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive Media Queries */
 
 
@@ -195,7 +208,14 @@ filter: gray;
 
 #suggest
 {
-	margin-top: 0;
+	margin: 0;
+	width: 100%;
+
+}
+
+.sub 
+{
+	margin-left: 0;
 }
 }
 
@@ -205,6 +225,11 @@ filter: gray;
 	margin: 0px;
 	padding: 0px;
 	border: 1px solid #e8e8e8;
+}
+
+.sub 
+{
+	margin-left: 0;
 }
 
 .videoAssembly
@@ -257,6 +282,8 @@ filter: gray;
 #suggest
 {
 	margin-top: 0;
+	margin: 0;
+	width: 100%;
 }
 
 .theatre
@@ -308,7 +335,7 @@ filter: gray;
 
 .player
 {
-	width: 75%;
+	width: 100%;
 	vertical-align: top;
 
 }
@@ -331,7 +358,8 @@ filter: gray;
 
 #suggest
 {
-	margin-top: 0;
+	margin: 0;
+	width: 100%;
 }
 
 .theatre
@@ -465,6 +493,7 @@ filter: gray;
     box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+
 }
 
 .video
@@ -496,7 +525,7 @@ filter: gray;
 
 .panel
 {
-	width: 20%;
+	width: 24%;
 }
 
 #ytplayer
@@ -547,4 +576,23 @@ and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : portrait) {
 /* STYLES GO HERE */
+}
+
+.info-player
+{
+	
+}
+
+div.panel
+{
+	padding: 1em 0em 0em 0em;
+	margin-bottom: 0em;
+	position: relative;
+	width: 24%;
+	/*top: -5px;*/
+}
+
+.sug-title
+{
+	width: 70%;
 }

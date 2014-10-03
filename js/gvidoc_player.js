@@ -8,6 +8,8 @@ var time;
 
 		$( document ).ready(function() {
 
+			$('.tip').tipr();
+
 
 			$('img.logo').addClass('load'); // Grayscale Hoover Effect
 
@@ -23,7 +25,7 @@ var time;
 
 			
 
-		//LoadGvidocThumbnails();
+		LoadGvidocThumbnails();
 		$('#start').on('click', function(e) {			
 			console.log("Guide Engine :"+guide);
 			if(guide)
@@ -123,6 +125,13 @@ var time;
 				else
 				$('#ytplayer').css('width', '100%');
 			}
+
+			if(viewPortWidth < 1000)
+			{
+				LoadGvidocThumbnails();
+			}
+
+
 			
   			
 	});
