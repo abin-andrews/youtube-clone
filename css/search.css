@@ -1,0 +1,10 @@
+div.videoAssembly
+{
+	max-width: 100%;
+}
+
+div.details
+{
+	display: inline-block;
+	vertical-align: top;
+}

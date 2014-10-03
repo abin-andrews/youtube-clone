@@ -33,7 +33,8 @@ var viewPortWidth = -1;
 
 			
 
-			LoadGvidocThumbnails();
+			
+			LoadGvidocSearchItems();
 		
 		// Side Bar Animation  Script
 		$('#start').on('click', function(e) {

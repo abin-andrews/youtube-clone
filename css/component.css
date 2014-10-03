@@ -23,6 +23,8 @@
 	position: absolute;
 	width: 100%;
 	z-index: 100;
+  	left: -45px\8;
+  	color: #60a773;
 }
 
 .dr-menu > div .dr-icon {
@@ -72,6 +74,8 @@
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+
+	top: -35px\8;
 }
 
 .dr-menu.dr-menu-open > div .dr-label {

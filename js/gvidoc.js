@@ -38,7 +38,7 @@ function LoadGvidocThumbnails(selector)
             if(this.localName == "span")
             {
                 var title = $(this).parent().data('title');
-                $(this).text(DivTextAdjuster(title, 35));
+                $(this).text(DivTextAdjuster(title, 34));
                 $(this).siblings('div.deemphasized').addClass('list-video-series');
             }
             else
@@ -99,4 +99,16 @@ function LoadGvidocThumbnails(selector)
     });
 
 	
+}
+
+function LoadGvidocSearchItems(selector) {
+
+    selector = typeof selector !== 'undefined' ? selector : 'div.video';
+    
+    $(selector).each(function() {            
+            var title = $(this).parent().siblings().data('title');
+            $(this).text(DivTextAdjuster(title, 35));
+            console.log(title);
+        });
+
 }

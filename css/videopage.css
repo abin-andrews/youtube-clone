@@ -1,3 +1,13 @@
+div.videoAssembly
+{
+	float: none;
+}
+
+#ytplayer 
+{
+	z-index: 1;
+}
+
 .last-center
 {
 	text-align: center;
@@ -99,6 +109,7 @@
 .logo
 {
 	opacity: 0.0;
+	filter: alpha(opacity=00); /* For IE8 and earlier */
 	-webkit-transition: opacity 4s; /* For Safari 3.1 to 6.0 */
     transition: opacity 4s;	
 }
@@ -106,6 +117,7 @@
 .load
 {
 	opacity: 1.0;
+	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
 img#logo {
@@ -387,6 +399,10 @@ filter: gray;
 	padding: 0px;
 }
 
+#suggest {
+	float: right;
+}
+
 
 .videoAssembly
 {
@@ -513,7 +529,7 @@ filter: gray;
 
 .player
 {
-	width: 75%;
+	width: 74.66%;
 	vertical-align: top;
 
 }
@@ -537,6 +553,7 @@ filter: gray;
 #suggest
 {
 	margin-top: 0;
+	float: right;
 }
 
 .theatre
@@ -596,3 +613,4 @@ div.panel
 {
 	width: 70%;
 }
+

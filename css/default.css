@@ -47,6 +47,12 @@ body {
 background: #f1f1f1;
 }
 
+.loading
+{
+	float: left;
+	clear: both;
+}
+
 
 /* Tooltip using CSS */
 
@@ -77,11 +83,12 @@ background: #f1f1f1;
 .video-actions
 {
 	opacity: 1;
+	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
 img.watch-it-later-icon
 {
-	background:  no-repeat url(../watch.png) -16px -445px
+	background:  no-repeat url(../watch.png) -16px -445px;
 }
 
 span.description_content
@@ -237,6 +244,7 @@ div.branding {
 	padding-bottom: 15px;
 	margin-bottom: 20px;
 	z-index: 5;
+	
 
 	/*For Box Shadow Stuff*/
 	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
@@ -267,12 +275,12 @@ div.description{
 span.description {
 	position:absolute; /* absolute position (so we can position it where we want)*/        
     display:none; /* hide it */  
-    /* styling bellow */ 
-    font-family: 'tahoma';  
-    font-size:15px;  
+    /* styling bellow */    
     color:white;  
-    top: 30px;
-    margin-left: 60px;
+    top: 32px;
+    margin-left: 58px;
+    float: left;
+    clear: both;
 }
 
 button.list-watch-it-later {
@@ -292,6 +300,11 @@ button.list-watch-it-later {
 	font-size: 12px;
 }
 
+span.list-time 
+{
+	background-color: rgba(14, 14, 14, 0.6);
+}
+
 
 div.description_content, span.description_content{
 	width: auto;    
@@ -309,7 +322,7 @@ span.list-video {
 
 div.title:hover, span.title:hover
 {
-	color: #167ac6;
+	color: 	#144955; 
 }
 
 .list-video-series {
@@ -424,7 +437,7 @@ span.deemphasized
 	margin-left: 10px;
 	margin-right: 10px;
 
-	border-bottom: 5px solid red;
+	border-bottom: 5px solid #ff2321;
 	font-size: 16px;
 	font-weight: bold;
 	font-family: sans-serif;
@@ -454,7 +467,7 @@ ul
 ul > li
 {
 	font-family: sans-serif;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 12px;
 	padding-left: 10px;
 }
@@ -622,6 +635,8 @@ display: block;
 background-color: #fff;
 margin: 0;
 padding: 10px;
+float: left;
+width: 100%;
 }
 
 div.footing {
@@ -744,7 +759,8 @@ div.right
 
   .videoAssembly
   {
-  	max-width: 77.5%
+  	max-width: 76.5%;
+  	
   }
     
 }
@@ -758,6 +774,7 @@ div.right
   .videoAssembly
   {
   	max-width: 70%;
+  	
   }
 
   .RightPanel
